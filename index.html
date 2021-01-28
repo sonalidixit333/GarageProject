@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <Link href="style.css" rel="stylesheet">
+    <title>DrSpanner's Garage</title>
+</head>
+<body>
+    <div class="full-section">
+      <header>
+          <a href="#" class="logo">DrSpanner Garage</a>
+          <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+      </header>
+        <section class="banner">
+            
+            <div class="imgbox">
+                <img src="img/page2.jpg" class="active">
+                <img src="img/page2.jpg">
+                <img src="img/page2.jpg">
+            </div>
+            <ul class="controls">
+                <li></li>
+                <li onclick="nextSlide();"></li>
+            </ul>
+            
+        </section>
+        <script type="text/javascript">
+        const imgbox = document.querySelector('.imgbox');
+        const slides=imgbox.getElementsByTagName('img');
+        var i=0;
+
+        function nextSlide(){
+            slides[i].classList.remove('active');
+            i=(i+1) % slides.length;
+            slides[i].classList.add('active');
+        }
+        </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
